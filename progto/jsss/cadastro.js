@@ -1,6 +1,7 @@
-const url_cad = "https://meujsb-efd17-default-rtdb.firebaseio.com/";
+const url_cad = "https://bora-14220-default-rtdb.firebaseio.com/";
 
 const cargo ='user'
+let cpf_usado=document.getElementById("cpf_usado")
 
 btn_cadastro.addEventListener('click',e=>{
     let usuario={
@@ -15,7 +16,7 @@ btn_cadastro.addEventListener('click',e=>{
     }
 
 
-fetch(url_cad+'user')
+fetch(url_cad+'user.json')
 .then(resposta =>resposta.json())
 .then(dados =>{
     for (const key in dados) {
@@ -31,7 +32,7 @@ fetch(url_cad+'user')
             }if(email.value != email_comfirma.value){
                 alertando(email_nãobate)
             }else{
-                fetch(url_cad+'user',{method:'POST',body:JSON.stringify(usuario)})
+                fetch(url_cad+'user.json',{method:'POST',body:JSON.stringify(usuario)})
             }
         }
 
@@ -41,8 +42,8 @@ fetch(url_cad+'user')
 })
 
 function alertando(n){
-    n.classlist.remove('esconde');
+    n.classList.remove('esconde');
             setTimeout(()=>{
-            n.classlist.add('esconde')
+            n.classList.add('esconde')
             },4000)
 }
