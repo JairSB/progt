@@ -12,7 +12,7 @@ btn_cadastro.addEventListener('click',e=>{
         'nick':(nick.value).toUpperCase(),
         'nome':nome.value,
         'nasci_data':nasci_dta.value,
-        'senha':senha
+        'senha':senha.value
     }
 
 
@@ -33,6 +33,7 @@ fetch(url_cad+'user.json')
                 alertando(email_nãobate)
             }else{
                 fetch(url_cad+'user.json',{method:'POST',body:JSON.stringify(usuario)})
+                window.location.href="http://127.0.0.1:5500/ht/Cocecta.html";
             }
         }
 
