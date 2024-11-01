@@ -28,7 +28,7 @@
         <div class="row predios">
             <span id ="mapas">
             </span>
-            <button type="button" id="adiciona_predio" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary prebt" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Adicionar local
               </button>
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -38,19 +38,19 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <input class="form-control form-control-lg" type="text" placeholder="nome do estabelecimento" aria-label=".form-control-lg example">
-                        <input class="form-control form-control-lg" type="text" placeholder="url da iamgem" aria-label=".form-control-lg example">
-                        <input class="form-control form-control-lg" type="number" placeholder="CEP" aria-label=".form-control-lg example">
-                        <input class="form-control form-control-lg" type="text" placeholder="descrião" aria-label=".form-control-lg example">
-                        <select class="form-select" aria-label="Default select example">
+                        <input class="form-control form-control-lg" id="nome" type="text" placeholder="nome do estabelecimento" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" id="img" type="text" placeholder="url da iamgem" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" id="cep" type="number" placeholder="cep" aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" id="descricao" type="text" placeholder="descrião" aria-label=".form-control-lg example">
+                        <select id="tipo" class="form-select" aria-label="Default select example">
                             <option selected>tipo de estabelecimento</option>
-                            <option value="1">restaurante</option>
-                            <option value="2">mercado</option>
-                            <option value="3">hospital</option>
+                            <option value="estaurante">restaurante</option>
+                            <option value="mercado">mercado</option>
+                            <option value="hospital">hospital</option>
                           </select>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salvar</button>
+                      <button type="button" id="adiciona_predio"  class="btn btn-secondary" data-bs-dismiss="modal">Salvar</button>
                     </div>
                   </div>
                 </div>
